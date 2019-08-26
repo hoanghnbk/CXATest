@@ -3,11 +3,6 @@ This is the project to handle requirement from CXA Group.<br/>
 <br/>Sample Todo, with add, delete, mark complete functions.
 <br/>Sample  Movie , with can see list movies, details.
 
-
- 
-
-  This app runs on react native v0.60.5.
-  <br />
 - Sample Todo Screen's features:<br />
     - Add todos
     - Delete todos
