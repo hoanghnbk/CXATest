@@ -14,9 +14,9 @@ Sample  Movie App, with can see list movies, details.
 
   Setup project:
  ```
- git clone https://github.com/datvp09/TestCXA.git
+ git clone https://github.com/hoanghnbk/CXATest.git
 
- cd TestCXA && npm install
+ npm install
 
  cd ios
 
