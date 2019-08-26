@@ -27,7 +27,7 @@ export default class TodoListScene extends Component {
                             onChangeText={this.changeTextSearchHandler}
                             onSubmitEditing={this.searchTodo}
                             value={this.state.searchText}
-                            placeholder="Search Tasks"
+                            placeholder="Search tasks here..."
                             returnKeyType="done"
                             returnKeyLabel="done"
                         />
@@ -60,7 +60,7 @@ export default class TodoListScene extends Component {
                             onChangeText={this.changeTextHandler}
                             onSubmitEditing={this.addTask}
                             value={this.state.text}
-                            placeholder="Add Tasks"
+                            placeholder="Add task here..."
                             returnKeyType="done"
                             returnKeyLabel="done"
                         />
