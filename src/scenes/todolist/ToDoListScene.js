@@ -93,7 +93,7 @@ export default class TodoListScene extends Component {
                             style={styles.iconCheckMark}/>
                     )
                 }
-                <Text style={styles.listItem}>
+                <Text style={[styles.listItem,item.isComplete&&styles.lineThrough]}>
                     {item.text}
                 </Text>
 

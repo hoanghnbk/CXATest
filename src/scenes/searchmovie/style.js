@@ -1,8 +1,9 @@
-const posterRatio=2/3;
-import {posterWidth} from 'src/util/constant';
+
+import { POSTER_RATIO, POSTER_WIDTH } from 'src/util/constant';
 import {Dimensions,Platform} from 'react-native';
 
-const isAndroid = Platform.OS === 'android';
+
+
 export const width=Dimensions.get('window').width/2;
 export default {
     container:{
@@ -18,7 +19,7 @@ export default {
     },
     imageBackground:{
         width:width,
-        minHeight:posterWidth/posterRatio,
+        minHeight:POSTER_WIDTH/2/POSTER_RATIO,
     },
     containerBottom:{
         backgroundColor: '#00000060',
@@ -32,7 +33,6 @@ export default {
         paddingLeft: 10,
         borderColor: 'gray',
         width: '90%',
-        borderWidth:isAndroid?1:0,
         flex:1
     },
     buttonNavigate:{

@@ -20,8 +20,8 @@ type Props = {
 
 export default class AppBar extends Component<Props> {
 
-    shouldRenderRight(){
-        const {  rightPress,  rightIcon, rightTitle } = this.props;
+    shouldRenderRight() {
+        const { rightPress, rightIcon, rightTitle } = this.props;
         return (rightIcon || rightTitle) && rightPress;
     }
 
@@ -52,7 +52,7 @@ export default class AppBar extends Component<Props> {
     };
 
     render() {
-        const {   title, style, disableBack } = this.props;
+        const { title, style, disableBack } = this.props;
 
         return (
             <Header style={style}>
@@ -61,7 +61,7 @@ export default class AppBar extends Component<Props> {
                 </Left>
 
                 <Body style={styles.body}>
-                <Title large>{title}</Title>
+                <Title large style={styles.title}>{title}</Title>
                 </Body>
 
                 <Right style={styles.right}>
@@ -73,6 +73,13 @@ export default class AppBar extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+    title: {
+        alignSelf: 'center',
+    },
+
+    left: {
+        flex: 1,
+    },
     body: {
         flex: 3,
     },

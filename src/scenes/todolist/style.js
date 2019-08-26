@@ -1,7 +1,3 @@
-import { Platform } from 'react-native';
-
-const isAndroid = Platform.OS === 'android';
-
 export default {
     container: {
         flex: 1,
@@ -22,6 +18,8 @@ export default {
         paddingBottom: 2,
         fontSize: 18,
         flex:1,
+
+
     },
     listItemCont: {
         paddingVertical:8,
@@ -40,7 +38,6 @@ export default {
         paddingLeft: 10,
         borderColor: 'gray',
         width: '90%',
-        borderWidth:isAndroid?1:0,
         flex:1
     },
     buttonNavigate:{
@@ -58,6 +55,9 @@ export default {
     },
     iconClear:{
         color:'grey'
+    },
+    lineThrough:{
+        textDecorationLine: 'line-through'
     }
 
 }

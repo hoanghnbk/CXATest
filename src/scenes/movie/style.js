@@ -1,5 +1,5 @@
-const posterRatio=2/3;
-import {posterWidth} from 'src/util/constant';
+
+import { POSTER_RATIO, POSTER_WIDTH } from 'src/util/constant';
 import {Dimensions} from 'react-native';
 export const width=Dimensions.get('window').width/2;
 export default {
@@ -8,7 +8,7 @@ export default {
     },
     imageBackground:{
         width:width,
-        minHeight:posterWidth/posterRatio,
+        minHeight:POSTER_WIDTH/2/POSTER_RATIO,
     },
     containerBottom:{
         backgroundColor: '#00000060',
