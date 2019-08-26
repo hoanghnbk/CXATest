@@ -27,7 +27,7 @@ export default class TodoListScene extends Component {
                             onChangeText={this.changeTextSearchHandler}
                             onSubmitEditing={this.searchTodo}
                             value={this.state.searchText}
-                            placeholder="Add Tasks"
+                            placeholder="Search Tasks"
                             returnKeyType="done"
                             returnKeyLabel="done"
                         />
