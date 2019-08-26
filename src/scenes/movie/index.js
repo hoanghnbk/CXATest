@@ -6,7 +6,7 @@ import MovieApi from 'src/services/movie';
 export default class Movie extends MovieScene {
     state = {
         movies: [],
-        page: 1,
+        page: 0,
     };
 
     async componentDidMount() {
@@ -27,8 +27,13 @@ export default class Movie extends MovieScene {
     };
 
     onHeaderButtonRightPress = () => {
+        console.log('SearchMovie');
+        NavigationService.navigate('SearchMovie');
+    };
+    onHeaderButtonLeftPress = () => {
         NavigationService.navigate('TodoList');
     };
+
 
     onEndReach = () => this.getMovie()
 };

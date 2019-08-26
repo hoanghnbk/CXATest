@@ -34,7 +34,7 @@ export default class AppBar extends Component<Props> {
                         ?
                         <Text>{leftTitle}</Text>
                         :
-                        <Icon name={leftIcon ? leftPress : ICO_BACK}/>
+                        <Icon name={leftIcon ? leftIcon : ICO_BACK}/>
                 }
             </Button>
         );

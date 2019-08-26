@@ -1,9 +1,8 @@
 import { FlatList, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
+import {Spinner} from 'native-base';
 import React, { Component } from 'react';
 import styles from './style';
 import AppBar from 'src/components/AppBar';
-
-import mock from './mock';
 import { BASE_IMAGE_URL } from 'src/util/constant';
 
 const IMAGE_WIDTH = 500;
@@ -19,8 +18,9 @@ export default class MovieScene extends Component {
             >
                 <AppBar
                     title={'Feature Movies'}
-                    disableBack
-                    rightIcon={'list'}
+                    leftTitle={'Todo'}
+                    leftPress={this.onHeaderButtonLeftPress}
+                    rightIcon={'search'}
                     rightPress={this.onHeaderButtonRightPress}/>
                 <FlatList
                     data={movies}
@@ -28,10 +28,12 @@ export default class MovieScene extends Component {
                     keyExtractor={(item,index)=>item.id.toString()||index.toString()}
                     renderItem={this.renderItem}
                     onEndReached={this.onEndReach}
+                    ListFooterComponent={this.renderFooter}
                 />
             </View>
         );
     }
+    renderFooter=()=><Spinner size={'large'} color={'grey'}/>
 
     renderItem=({item,index})=>{
         return(

@@ -9,7 +9,6 @@ YellowBox.ignoreWarnings(['Warning: Async Storage has been extracted']);
 
 export default class App extends Component {
 
-
     render() {
         return (
             <AppContainer ref={navigatorRef => {

@@ -2,6 +2,8 @@ import { createSwitchNavigator, createAppContainer, createStackNavigator } from 
 import TodoList from 'src/scenes/todolist';
 import Movie from 'src/scenes/movie';
 import MovieDetail from 'src/scenes/detailmovie';
+import SearchMovie from 'src/scenes/searchmovie';
+
 
 const StackMovie = createStackNavigator({
         Movie:{
@@ -10,6 +12,9 @@ const StackMovie = createStackNavigator({
         MovieDetail:{
             screen:MovieDetail
         },
+        SearchMovie:{
+            screen:SearchMovie
+        }
 
     },
     {
@@ -17,10 +22,8 @@ const StackMovie = createStackNavigator({
     }
 );
 const AppRouter = createSwitchNavigator({
-        // MovieDetail,
         TodoList,
-        StackMovie
-
+        StackMovie,
     },
     {
         headerMode: 'none',
